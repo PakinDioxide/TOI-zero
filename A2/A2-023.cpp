@@ -1,5 +1,3 @@
-// 80/100 - WA
-
 /*
     author  : PakinDioxide
     created : 02/04/2025 11:01
@@ -29,7 +27,7 @@ int main() {
         else if ((e == 'I' || e == 'T') && sb) ccnt++;
         ++id;
     }
-    if (!ok) cout << "no" << ' ' << id << '\n';
+    if (!ok || (sr && cnt == 0) || (sb && ccnt == 0)) cout << "no" << ' ' << min(id, (int) s.size() - 1) << '\n';
     else if (unn) cout << "unknown" << ' ' << s.size() << '\n';
     else if (ok) cout << "yes" << ' ' << mx << '\n';
 }
